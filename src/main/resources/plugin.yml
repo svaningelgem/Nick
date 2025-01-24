@@ -3,11 +3,14 @@ version: '2.5'
 main: me.sk8ingduck.nick.Nick
 authors: [ sk8ingDuck ]
 
-softdepend:
-  - NametagEdit
-  - TAB
-  - LuckPerms
+depend:
   - PlaceholderAPI
+
+softdepend:
+  - TAB
+  - NametagEdit
+  - LuckPerms
+
 commands:
   nick:
     description: nick yourself

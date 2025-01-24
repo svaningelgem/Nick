@@ -46,7 +46,7 @@ public final class Nick extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 
-		DisguiseManager.setPlugin(this);
+		DisguiseManager.initialize(this, false);
 		ConfigurationSerialization.registerClass(Group.class);
 
 		DBConfig dbConfig = new DBConfig("database.yml", getDataFolder());
