@@ -105,6 +105,10 @@
             <url>https://repo.extendedclip.com/releases/</url>
         </repository>
 
+        <repository>
+            <id>gravemc-repo</id>
+            <url>https://repo.gravemc.net/releases/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -124,7 +128,7 @@
         <dependency>
             <groupId>dev.iiahmed</groupId>
             <artifactId>ModernDisguise</artifactId>
-            <version>3.0-SNAPSHOT</version>
+            <version>3.5</version>
             <scope>compile</scope>
         </dependency>
 
