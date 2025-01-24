@@ -8,6 +8,7 @@ import me.sk8ingduck.nick.manager.NickManager;
 import me.sk8ingduck.nick.sql.Database;
 import me.sk8ingduck.nick.util.Nickname;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -47,6 +48,8 @@ public class PlayerJoinListener implements Listener {
 		DisguiseResponse response = nickManager.nickPlayer(player, nick);
 		if (response == DisguiseResponse.SUCCESS) {
 			String nickName = nick.getName();
+			event.setJoinMessage(ChatColor.YELLOW + nickName + " joined the game");
+
 			Bukkit.getScheduler().scheduleSyncDelayedTask(Nick.getInstance(), () ->
 							player.sendMessage(messagesConfig.get("nick.successful.self")
 							.replaceAll("%PREFIX%", nickManager.getFakePrefix(player))
